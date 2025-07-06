@@ -1,58 +1,96 @@
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
-    <title>Patent Pilot 統�??�????</title>
+    <title>Patent Pilot 統計資料</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="row">
-        <div class="search">
-            檢索
-            <input tpye="text" value="input...">
-            <input type="button" value="Search">
-            Model: gpt-3.5-turbo
-        </div>
-        
-        <table>
-            <tbody>
-                <tr>
-                    <td>Input tokens:</td>
-                    <td>0</td>
-                    <td>Output tokens:</td>
-                    <td>0</td>
-                    <td>Total tokens:</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>Input cost:</td>
-                    <td>0</td>
-                    <td>Output cost:</td>
-                    <td>0</td>
-                    <td>total cost:</td>
-                    <td>0</td>
-                </tr>
-            </tbody>
-        </table>
+  <div class="whole-gap">
+    <div class="row-gap ">
+      <div class="page-list">
+          檢索
+          <input type="text" placeholder="input...">
+          <input type="button" value="Search">
+          Model:
+          <span class="color-blue">gpt-3.5-turbo</span>
+          <span class="small-text">(just for caculate)</span>
+      </div>
+      <table>
+        <tbody>
+          <tr>
+            <td >Input tokens:</td>
+            <td class="color-blue">4,008</td>
+            <td>Output tokens:</td>
+            <td class="color-blue">1,652</td>
+            <td>Total tokens:</td>
+            <td class="color-blue">5,660</td>
+          </tr>
+          <tr>
+            <td>Input cost:</td>
+            <td class="color-blue">USD 0.72</td>
+            <td>Output cost:</td>
+            <td class="color-blue">USD 0.13</td>
+            <td>total cost:</td>
+            <td class="color-blue">USD 0.85</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-            <table class="right">
-            <tbody>
-                <tr>
-                    <td>Input tokens:</td>
-                    <td>0</td>
-                    <td>Output tokens:</td>
-                    <td>0</td>
-                    <td>Total tokens:</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>Input cost:</td>
-                    <td>0</td>
-                    <td>Output cost:</td>
-                    <td>0</td>
-                    <td>total cost:</td>
-                    <td>0</td>
-                </tr>
-            </tbody>
-        </table>
+    <table class="main-table">
+      <thead>
+        <tr>
+          <th>Prompt Key</th>
+          <th>Product</th>
+          <th>Application Name</th>
+          <th>User Name</th>
+          <th>User ID</th>
+          <th>Model</th>
+          <th>Prompt Tokens (input)</th>
+          <th>Completion Tokens (output)</th>
+          <th>From Cache</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>簡報通</td>
+          <td>WEBPAT</td>
+          <td>ltdtest</td>
+          <td>大頭</td>
+          <td>BigHead</td>
+          <td>gemini</td>
+          <td class="text-right">3,654</td>
+          <td class="text-right">1,561</td>
+          <td>v</td>
+          <td>2025:7:6 22:10:45</td>
+        </tr>
+        <tr>
+          <td>通通通</td>
+          <td>IPTech</td>
+          <td>新穎</td>
+          <td>大鼻子</td>
+          <td>BigNose</td>
+          <td>gpt-3-ooo</td>
+          <td class="text-right">364</td>
+          <td class="text-right">91</td>
+          <td></td>
+          <td>2025:7:6 22:15:45</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="page-list">
+      Total 2353
+      <select>
+        <option>10</option>
+        <option>20</option>
+        <option>50</option>
+      </select>
+      <input type="button" value="<">
+      1 2 3 ... 20
+      <input type="button" value=">">
+      Go to
+      <input class="go-to-width" type="text" value="1">
+    </div>
+  </div>
 </body>
 </html>
